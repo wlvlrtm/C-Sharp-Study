@@ -35,6 +35,9 @@ namespace C_Sharp_Study {
                             냥탱이
                           ";
             Console.WriteLine(str);
+            Console.WriteLine("123" + 456);
+            
+
         }
     }
 }
