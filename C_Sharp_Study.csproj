@@ -40,7 +40,13 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Car.cs" />
+        <Compile Include="Category.cs" />
+        <Compile Include="Cup.cs" />
+        <Compile Include="IKs.cs" />
         <Compile Include="IStandard.cs" />
+        <Compile Include="Multi.cs" />
+        <Compile Include="Pair.cs" />
+        <Compile Include="Person.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
