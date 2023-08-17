@@ -3,7 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace C_Sharp_Study {
-    public class Program {
+    public class Original {
+    }
+
+    public static class OriginalExt {
+        public static void NewMethod(this Original original) {
+            
+        }    
+    }
+    
+    static class Program {
+        static string Three(this string val) {
+            return val.Substring(0, 3);
+        }
+        
         private static void Main() {
             List<Person> people = new List<Person>();
             
@@ -58,6 +71,8 @@ namespace C_Sharp_Study {
             Console.WriteLine(myPair.Second);
             Console.WriteLine(yourPair.First);
             Console.WriteLine(yourPair.Second);
+            
+            Console.WriteLine("Hello, world!".Three());
         }
     }
 }
