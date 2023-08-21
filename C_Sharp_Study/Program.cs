@@ -14,6 +14,8 @@
 
             var t = Tally();
             Console.WriteLine(t.Item1);
+            
+            Console.WriteLine(C_Sharp_Study_Class_Library.Creator.GetName());
         }
     }   
 }

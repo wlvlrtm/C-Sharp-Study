@@ -7,4 +7,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Reference Include="C_Sharp_Study_Class_Library">
+        <HintPath>..\..\..\..\Desktop\C_Sharp_Study_Library\C_Sharp_Study_Class_Library\bin\Debug\net7.0\C_Sharp_Study_Class_Library.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
