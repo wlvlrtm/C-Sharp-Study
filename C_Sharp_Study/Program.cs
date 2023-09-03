@@ -1,24 +1,18 @@
-﻿using System.Threading;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace C_Sharp_Study {
     static class C_Sharp_Study {
-        public static void Main() {
-            Thread thread = new Thread(new ThreadStart(ThreadDemo));
+        public static async Task Main() {
+            var service = new WeatherForecastService();
+            var forecasts = await service.GetForecastAsync(DateTime.Now);
             
-            //Parallel.For(0, 5000_0000, (i) => { Console.WriteLine(i); });
+            Console.WriteLine("Date\tTemp. (C)\tSummary");
             
-            for (int i = 0; i <= 5000_0000; i++) {
-                Console.WriteLine(i);
+            foreach (var forecast in forecasts) {
+                Console.WriteLine($"{forecast.Date.ToShortDateString()}\t" + $"{forecast.TemperatureC}\t{forecast.Summary}");
             }
-            
-            thread.Start();
-        }
-
-        public static void ThreadDemo() {
-            Console.Write("Hello, ");
-            Thread.Sleep(1000);
-            Console.WriteLine("world!");
         }
     }   
 }
